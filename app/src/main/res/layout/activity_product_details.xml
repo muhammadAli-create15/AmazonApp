@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetailsActivity">
+
+
+    <ImageView
+        android:id="@+id/product_image_details"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:scaleType="centerCrop" />
+    <TextView
+    android:id="@+id/product_detail_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/product_image_details"
+    android:text="Product Name"
+    android:textAlignment="center"
+    android:textColor="#822891"
+    android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/product_detail_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_detail_name"
+        android:layout_marginTop="2dp"
+        android:text="Product Description"
+        android:textAlignment="center"
+        android:textColor="#822691"
+        android:textSize="16dp" />
+    <TextView
+        android:id="@+id/product_detail_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_detail_description"
+        android:layout_marginTop="2dp"
+        android:text="Product Price"
+        android:textAlignment="center"
+        android:textColor="#822691"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/product_detail_price"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+        <!-- This empty View acts as a spacer, pushing the button to the start -->
+
+        <Button
+            android:id="@+id/decrementButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="-"
+            android:textSize="20dp"
+            android:textColor="#822691"
+            android:textStyle="bold"
+            android:backgroundTint="#D5ADDC"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <TextView
+            android:id="@+id/displayNumber"
+            android:layout_width="43dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:text="0"
+            android:textColor="#3D5AFE"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+        <!-- This empty View acts as a spacer, pushing the button to the start -->
+
+        <Button
+            android:id="@+id/incrementButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="+"
+            android:textSize="20dp"
+            android:textColor="#822691"
+            android:textStyle="bold"
+            android:backgroundTint="#D5ADDC"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Other Views -->
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addToCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/cart"
+        android:backgroundTint="#D5ADDC"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"/>
+
+
+</RelativeLayout>
